@@ -8,7 +8,7 @@ export default defineConfig({
     // Configure the proxy middleware
     proxy: {
       '/api': {
-        target: 'http://localhost:8000', // Your backend server's address
+        target: 'https://blogserver-17hw.onrender.com', // Your backend server's address
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, ''), // Remove the '/api' prefix
       },
