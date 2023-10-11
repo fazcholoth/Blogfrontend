@@ -7,6 +7,7 @@ function useAdminauth() {
 
     const isAminlogged = () => {
         if (!admin) {
+            
             navigate('/admin/login')
         }
     }
