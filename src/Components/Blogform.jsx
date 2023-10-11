@@ -53,7 +53,7 @@ const EditorComponent = () => {
       formData.append("image", file);
 
       const imgresponse = await axios.post(
-        "http://localhost:8000/admin/uploadmainimg",
+        "https://blogserver-17hw.onrender.com/admin/uploadmainimg",
         formData,
         {
           headers: {
@@ -74,7 +74,7 @@ const EditorComponent = () => {
       };
 
       const blogresponse = await axios.post(
-        "http://localhost:8000/admin/uploadBlog",
+        "https://blogserver-17hw.onrender.com/admin/uploadBlog",
         blogData
       );
 
@@ -115,7 +115,7 @@ const EditorComponent = () => {
                 const formData = new FormData();
                 formData.append("file", file);
                 const response = await axios.post(
-                  "http://localhost:8000/admin/uploadFile",
+                  "https://blogserver-17hw.onrender.com/admin/uploadFile",
                   formData,
                   {
                     headers: {

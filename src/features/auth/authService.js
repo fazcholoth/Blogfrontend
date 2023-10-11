@@ -5,7 +5,7 @@ import { toast } from 'react-toastify';
 
 const register = async (userData) => {
   const response = await axios.post(
-    "http://localhost:8000/registeruser",
+    "https://blogserver-17hw.onrender.com/registeruser",
     userData,
     {
       headers: {
@@ -29,7 +29,7 @@ const register = async (userData) => {
 const adminlogin = async (adminData) => {
   console.log(adminData);
   const response = await axios.post(
-    "http://localhost:8000/admin/login",
+    "https://blogserver-17hw.onrender.com/admin/login",
     adminData,
     {
       headers: {

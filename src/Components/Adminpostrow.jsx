@@ -13,7 +13,7 @@ function Adminallpost() {
 
   useEffect(() => {
     const fetchblogs = async () => {
-      const response = await axios.get("http://localhost:8000/getallblogs");
+      const response = await axios.get("https://blogserver-17hw.onrender.com/getallblogs");
  
       const blogs = response.data;
       setallblogs(blogs);
@@ -25,7 +25,7 @@ function Adminallpost() {
 
   const handledeletepost = async(blogid)=>{
     const updatedblog = await axios.post(
-      `http://localhost:8000/admin/deletepost/${blogid}`,
+      `https://blogserver-17hw.onrender.com/admin/deletepost/${blogid}`,
     );
     setupdatedblogs(updatedblog)
 

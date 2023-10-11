@@ -28,7 +28,7 @@ function Detailedpost() {
 
     const fetchBlog = async () => {
       try {
-        const blogResponse = await axios.get(`http://localhost:8000/getblog/${blogid}`);
+        const blogResponse = await axios.get(`https://blogserver-17hw.onrender.com/getblog/${blogid}`);
         const fetchedBlog = blogResponse.data;
         setBlog(fetchedBlog);
         console.log(fetchedBlog);

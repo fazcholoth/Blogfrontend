@@ -41,21 +41,21 @@ function Admincategory() {
 
   const handlelist = async(catid)=>{
     const updatedcategory = await axios.post(
-      `http://localhost:8000/admin/listcategory/${catid}`,
+      `https://blogserver-17hw.onrender.com/admin/listcategory/${catid}`,
     );
      setupdatedcategory(updatedcategory)
   }
 
   const handleunlist = async(catid)=>{
     const updatedcategory = await axios.post(
-      `http://localhost:8000/admin/unlistcategory/${catid}`,
+      `https://blogserver-17hw.onrender.com/admin/unlistcategory/${catid}`,
     );
     setupdatedcategory(updatedcategory)
   }
 
   const handleaddcategory = async(catid)=>{
     const updatedcategory = await axios.post(
-      "http://localhost:8000/admin/addcategory",
+      "https://blogserver-17hw.onrender.com/admin/addcategory",
       {name:catname},
     );
     setupdatedcategory(updatedcategory)
@@ -64,7 +64,7 @@ function Admincategory() {
 
   useEffect(() => {
     const fetchcategory = async () => {
-      const response = await axios.get("http://localhost:8000/admin/categories");
+      const response = await axios.get("https://blogserver-17hw.onrender.com/admin/categories");
   
       const categories = response.data;
       setcategories(categories);

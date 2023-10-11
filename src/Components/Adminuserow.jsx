@@ -7,7 +7,7 @@ function Adminusertable() {
 
   useEffect(() => {
     const fetchusers = async () => {
-      const response = await axios.get("http://localhost:8000/getusers");
+      const response = await axios.get("https://blogserver-17hw.onrender.com/getusers");
 
       const usersdata = response.data;
       setusers(usersdata);
@@ -19,7 +19,7 @@ function Adminusertable() {
 
   const handleblockuser = async(userid)=>{
     const updateduser = await axios.post(
-      `http://localhost:8000/admin/blockuser/${userid}`,
+      `https://blogserver-17hw.onrender.com/admin/blockuser/${userid}`,
     );
     setupdatedusers(updateduser)
 
@@ -28,7 +28,7 @@ function Adminusertable() {
 
   const handleunblockuser = async(userid)=>{
     const updateduser = await axios.post(
-      `http://localhost:8000/admin/unblockuser/${userid}`,
+      `https://blogserver-17hw.onrender.com/admin/unblockuser/${userid}`,
     );
     setupdatedusers(updateduser)
 

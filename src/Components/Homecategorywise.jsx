@@ -20,7 +20,7 @@ function Category() {
 
   useEffect(() => {
     const fetchfeaturedblogs = async () => {
-      const response = await axios.get("http://localhost:8000/getfeaturedblogs");
+      const response = await axios.get("https://blogserver-17hw.onrender.com/getfeaturedblogs");
 
       const blogs = response.data;
       setfeaturedblogs(blogs);
@@ -32,7 +32,7 @@ function Category() {
 
   useEffect(() => {
     const fetchwriters = async () => {
-      const response = await axios.get("http://localhost:8000/getwriters");
+      const response = await axios.get("https://blogserver-17hw.onrender.com/getwriters");
 
       const writers = response.data;
       setwriters(writers);
@@ -45,7 +45,7 @@ function Category() {
 
   useEffect(() => {
     const fetchrecommentedTopics = async () => {
-      const response = await axios.get("http://localhost:8000/recommentedtopics");
+      const response = await axios.get("https://blogserver-17hw.onrender.com/recommentedtopics");
 
       const topics = response.data;
       settopics(topics);
@@ -57,7 +57,7 @@ function Category() {
 
   useEffect(() => {
    const fetchblogs = async () => {
-     const response = await axios.get(`http://localhost:8000/getcategoryblogs/${categoryid}`);
+     const response = await axios.get(`https://blogserver-17hw.onrender.com/getcategoryblogs/${categoryid}`);
      console.log(response.data);
      const blogs = response.data;
      setallblogs(blogs);
@@ -70,7 +70,7 @@ function Category() {
 
  useEffect(() => {
     const fetchcategory = async () => {
-      const response = await axios.get("http://localhost:8000/categories");
+      const response = await axios.get("https://blogserver-17hw.onrender.com/categories");
   
       const categories = response.data;
       setcategories(categories);
