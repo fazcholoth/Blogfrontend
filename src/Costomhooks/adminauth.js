@@ -12,7 +12,7 @@ function useAdminauth() {
         }
     }
 
-    return isAminlogged; 
+    return isAminlogged
 }
 
 export default useAdminauth;
